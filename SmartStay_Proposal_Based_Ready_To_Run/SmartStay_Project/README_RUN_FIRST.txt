@@ -1,6 +1,6 @@
-SMART STAY - Proposal Based Ready-To-Run Project
+SMART STAY - Hotel management system
 
-This ZIP was generated according to the uploaded Smart Stay proposal. It includes:
+ It includes:
 
 1. Spring Boot backend
 2. JavaFX desktop frontend
@@ -19,8 +19,6 @@ This ZIP was generated according to the uploaded Smart Stay proposal. It include
     - Dynamic Pricing Algorithm
     - Moving Average Demand Forecast
     - Budget-based Room Recommendation
-    - Auto Room Upgrade Logic
-    - Sorting and Filtering API for room search
 
 DEFAULT LOGIN
 Username: admin
