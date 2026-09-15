@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.kairav.hotelapp.controller.LoginController"
+            style="-fx-background-color: #111827;">
+
+    <center>
+        <HBox alignment="CENTER"
+              spacing="0"
+              style="-fx-background-color: white; -fx-background-radius: 18;">
+
+            <!-- Left panel -->
+            <VBox spacing="18"
+                  prefWidth="420"
+                  alignment="CENTER_LEFT"
+                  style="-fx-background-color: #1d4ed8; -fx-background-radius: 18 0 0 18;">
+
+                <padding>
+                    <Insets top="45" right="40" bottom="45" left="40"/>
+                </padding>
+
+                <Label text="Smart Stay"
+                       style="-fx-font-size: 34px; -fx-font-weight: bold; -fx-text-fill: white;"/>
+
+                <Label text="Hotel Management System"
+                       style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #dbeafe;"/>
+
+                <Label text="A smart desktop application for managing hotel rooms, customers, bookings, payments, staff and intelligent hotel tools."
+                       wrapText="true"
+                       style="-fx-font-size: 14px; -fx-text-fill: #eff6ff;"/>
+
+                <Region prefHeight="15"/>
+
+                <Label text="✓ Room Management"
+                       style="-fx-font-size: 14px; -fx-text-fill: white;"/>
+
+                <Label text="✓ Booking and Billing"
+                       style="-fx-font-size: 14px; -fx-text-fill: white;"/>
+
+                <Label text="✓ Staff and Service Records"
+                       style="-fx-font-size: 14px; -fx-text-fill: white;"/>
+
+                <Label text="✓ Smart Pricing Tools"
+                       style="-fx-font-size: 14px; -fx-text-fill: white;"/>
+
+            </VBox>
+
+            <!-- Right login form -->
+            <VBox spacing="18"
+                  prefWidth="480"
+                  alignment="CENTER"
+                  style="-fx-background-color: white; -fx-background-radius: 0 18 18 0;">
+
+                <padding>
+                    <Insets top="45" right="55" bottom="45" left="55"/>
+                </padding>
+
+                <Label text="Welcome Back"
+                       style="-fx-font-size: 30px; -fx-font-weight: bold; -fx-text-fill: #111827;"/>
+
+                <Label text="Login to continue to Smart Stay"
+                       style="-fx-font-size: 14px; -fx-text-fill: #6b7280;"/>
+
+                <Pane prefHeight="10"/>
+
+                <VBox spacing="7" maxWidth="340">
+                    <Label text="Username"
+                           style="-fx-font-size: 13px; -fx-font-weight: bold; -fx-text-fill: #374151;"/>
+
+                    <TextField fx:id="usernameField"
+                               promptText="Enter username"
+                               prefHeight="42"
+                               maxWidth="340"
+                               style="-fx-background-radius: 8; -fx-border-radius: 8; -fx-border-color: #d1d5db; -fx-padding: 0 12 0 12;"/>
+                </VBox>
+
+                <VBox spacing="7" maxWidth="340">
+                    <Label text="Password"
+                           style="-fx-font-size: 13px; -fx-font-weight: bold; -fx-text-fill: #374151;"/>
+
+                    <PasswordField fx:id="passwordField"
+                                   promptText="Enter password"
+                                   prefHeight="42"
+                                   maxWidth="340"
+                                   style="-fx-background-radius: 8; -fx-border-radius: 8; -fx-border-color: #d1d5db; -fx-padding: 0 12 0 12;"/>
+                </VBox>
+
+                <Button text="Login"
+                        onAction="#login"
+                        prefHeight="44"
+                        maxWidth="340"
+                        style="-fx-background-color: #2563eb; -fx-text-fill: white; -fx-font-size: 15px; -fx-font-weight: bold; -fx-background-radius: 8;"/>
+
+                <VBox alignment="CENTER"
+                      spacing="5"
+                      style="-fx-background-color: #f3f4f6; -fx-background-radius: 10; -fx-padding: 12;">
+                    <Label text="Default Login"
+                           style="-fx-font-size: 13px; -fx-font-weight: bold; -fx-text-fill: #111827;"/>
+                    <Label text="Username: admin"
+                           style="-fx-font-size: 12px; -fx-text-fill: #374151;"/>
+                    <Label text="Password: admin123"
+                           style="-fx-font-size: 12px; -fx-text-fill: #374151;"/>
+                </VBox>
+
+            </VBox>
+
+        </HBox>
+    </center>
+
+</BorderPane>

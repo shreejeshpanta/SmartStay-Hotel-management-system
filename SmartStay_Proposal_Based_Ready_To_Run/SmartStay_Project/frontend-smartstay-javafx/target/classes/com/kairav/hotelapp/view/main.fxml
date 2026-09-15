@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="rootPane" style="-fx-background-color: #f4f6f8;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kairav.hotelapp.controller.MainController">
+
+    <!-- Left Sidebar -->
+    <left>
+        <VBox prefWidth="230" spacing="10" style="-fx-background-color: #111827;">
+
+            <padding>
+                <Insets bottom="25" left="15" right="15" top="25" />
+            </padding>
+
+            <Label style="-fx-text-fill: white; -fx-font-size: 26px; -fx-font-weight: bold;" text="Smart Stay" />
+
+            <Label style="-fx-text-fill: #9ca3af; -fx-font-size: 12px;" text="Hotel Management System" />
+
+            <Pane prefHeight="15" />
+
+            <Button maxWidth="Infinity" onAction="#dashboard" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 14px; -fx-alignment: CENTER_LEFT; -fx-padding: 12 15 12 15;" text="Dashboard">
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor></Button>
+
+            <Button maxWidth="Infinity" onAction="#rooms" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 14px; -fx-alignment: CENTER_LEFT; -fx-padding: 12 15 12 15;" text="Rooms">
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor></Button>
+
+            <Button maxWidth="Infinity" onAction="#customers" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 14px; -fx-alignment: CENTER_LEFT; -fx-padding: 12 15 12 15;" text="Customers">
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor></Button>
+
+            <Button maxWidth="Infinity" onAction="#bookings" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 14px; -fx-alignment: CENTER_LEFT; -fx-padding: 12 15 12 15;" text="Bookings">
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor></Button>
+
+            <Button maxWidth="Infinity" onAction="#payments" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 14px; -fx-alignment: CENTER_LEFT; -fx-padding: 12 15 12 15;" text="Payments">
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor></Button>
+            <Button alignment="BASELINE_LEFT" maxWidth="Infinity" onAction="#invoices" prefHeight="25.0" prefWidth="169.0" style="-fx-background-color: transparent; -fx-padding: 12 15 12 15;" styleClass="sidebar-button" text="Invoices" textFill="WHITE">
+            <font>
+               <Font size="14.0" />
+            </font>
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor></Button>
+            <Button maxWidth="Infinity" onAction="#staff" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 14px; -fx-alignment: CENTER_LEFT; -fx-padding: 12 15 12 15;" text="Staff">
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor></Button>
+
+            <Button maxWidth="Infinity" onAction="#services" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 14px; -fx-alignment: CENTER_LEFT; -fx-padding: 12 15 12 15;" text="Services">
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor></Button>
+
+            <Button maxWidth="Infinity" onAction="#smart" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 14px; -fx-alignment: CENTER_LEFT; -fx-padding: 12 15 12 15;" text="Smart Tools">
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor></Button>
+
+            <Pane VBox.vgrow="ALWAYS" />
+
+            <Button maxWidth="Infinity" onAction="#logout" style="-fx-background-color: #dc2626; -fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold; -fx-padding: 12 15 12 15; -fx-background-radius: 8;" text="Logout">
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor></Button>
+
+        </VBox>
+    </left>
+
+    <!-- Top Header -->
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="20" style="-fx-background-color: white; -fx-border-color: #e5e7eb; -fx-border-width: 0 0 1 0;">
+
+            <padding>
+                <Insets bottom="15" left="25" right="25" top="15" />
+            </padding>
+
+            <Label style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: #111827;" text="Smart Stay Admin Panel" />
+
+            <Pane HBox.hgrow="ALWAYS" />
+
+            <Label fx:id="userLabel" style="-fx-font-size: 14px; -fx-text-fill: #374151;" text="Logged in" />
+
+        </HBox>
+    </top>
+
+    <!-- Default Center Area -->
+    <center>
+        <VBox alignment="CENTER" spacing="10" style="-fx-background-color: #f4f6f8;">
+
+            <Label style="-fx-font-size: 30px; -fx-font-weight: bold; -fx-text-fill: #111827;" text="Welcome to Smart Stay" />
+
+            <Label style="-fx-font-size: 15px; -fx-text-fill: #6b7280;" text="Select a menu item from the left sidebar to continue." />
+
+        </VBox>
+    </center>
+
+</BorderPane>

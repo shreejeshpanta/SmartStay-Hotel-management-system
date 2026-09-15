@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.kairav.hotelapp.controller.InvoiceController"
+            style="-fx-background-color:#F1F5F9;">
+
+    <!-- TOP HEADER -->
+
+    <top>
+
+        <HBox alignment="CENTER_LEFT"
+              spacing="15"
+              style="-fx-background-color:white;
+                     -fx-padding:20;
+                     -fx-border-color:#E2E8F0;
+                     -fx-border-width:0 0 1 0;">
+
+            <VBox spacing="5">
+
+                <Label text="Invoice Management"
+                       style="-fx-font-size:30;
+                              -fx-font-weight:bold;
+                              -fx-text-fill:#0F172A;"/>
+
+                <Label text="Generate customer bills and hotel invoices"
+                       style="-fx-font-size:14;
+                              -fx-text-fill:#64748B;"/>
+
+            </VBox>
+
+            <Pane HBox.hgrow="ALWAYS"/>
+
+            <Button text="Refresh"
+                    onAction="#refresh"
+                    style="-fx-background-color:#2563EB;
+                           -fx-text-fill:white;
+                           -fx-font-size:14;
+                           -fx-font-weight:bold;
+                           -fx-padding:10 22;
+                           -fx-background-radius:10;
+                           -fx-cursor:hand;"/>
+
+        </HBox>
+
+    </top>
+
+    <!-- CENTER CONTENT -->
+
+    <center>
+
+        <VBox spacing="20">
+
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+
+            <!-- CREATE INVOICE CARD -->
+
+            <VBox spacing="18"
+                  style="-fx-background-color:white;
+                         -fx-padding:25;
+                         -fx-background-radius:18;
+                         -fx-effect:dropshadow(gaussian, rgba(0,0,0,0.08), 12,0,0,4);">
+
+                <Label text="Create Invoice"
+                       style="-fx-font-size:22;
+                              -fx-font-weight:bold;
+                              -fx-text-fill:#0F172A;"/>
+
+                <GridPane hgap="15" vgap="15">
+
+                    <columnConstraints>
+                        <ColumnConstraints percentWidth="50"/>
+                        <ColumnConstraints percentWidth="50"/>
+                    </columnConstraints>
+
+                    <!-- ROW 1 -->
+
+                    <ComboBox fx:id="customerBox"
+                              promptText="Select Customer"
+                              prefHeight="42"
+                              GridPane.rowIndex="0"
+                              GridPane.columnIndex="0"/>
+
+                    <ComboBox fx:id="bookingBox"
+                              promptText="Select Booking"
+                              prefHeight="42"
+                              GridPane.rowIndex="0"
+                              GridPane.columnIndex="1"/>
+
+                    <!-- ROW 2 -->
+
+                    <TextField fx:id="roomCharge"
+                               promptText="Room Charge"
+                               prefHeight="42"
+                               GridPane.rowIndex="1"
+                               GridPane.columnIndex="0"/>
+
+                    <TextField fx:id="serviceCharge"
+                               promptText="Service Charge"
+                               prefHeight="42"
+                               GridPane.rowIndex="1"
+                               GridPane.columnIndex="1"/>
+
+                    <!-- ROW 3 -->
+
+                    <TextField fx:id="taxAmount"
+                               promptText="Tax Amount"
+                               prefHeight="42"
+                               GridPane.rowIndex="2"
+                               GridPane.columnIndex="0"/>
+
+                </GridPane>
+
+                <!-- BUTTONS -->
+
+                <HBox spacing="12">
+
+                    <Button text="Generate Invoice"
+                            onAction="#generateInvoice"
+                            style="-fx-background-color:#16A34A;
+                                   -fx-text-fill:white;
+                                   -fx-font-size:14;
+                                   -fx-font-weight:bold;
+                                   -fx-padding:12 24;
+                                   -fx-background-radius:10;
+                                   -fx-cursor:hand;"/>
+
+                    <Button text="Print Bill"
+                            onAction="#printBill"
+                            style="-fx-background-color:#7C3AED;
+                                   -fx-text-fill:white;
+                                   -fx-font-size:14;
+                                   -fx-font-weight:bold;
+                                   -fx-padding:12 24;
+                                   -fx-background-radius:10;
+                                   -fx-cursor:hand;"/>
+
+                </HBox>
+
+            </VBox>
+
+            <!-- TABLE CARD -->
+
+            <VBox spacing="15"
+                  VBox.vgrow="ALWAYS"
+                  style="-fx-background-color:white;
+                         -fx-padding:25;
+                         -fx-background-radius:18;
+                         -fx-effect:dropshadow(gaussian, rgba(0,0,0,0.08), 12,0,0,4);">
+
+                <Label text="Invoice Records"
+                       style="-fx-font-size:22;
+                              -fx-font-weight:bold;
+                              -fx-text-fill:#0F172A;"/>
+
+                <TableView fx:id="table"
+                           VBox.vgrow="ALWAYS"
+                           style="-fx-background-radius:12;">
+
+                    <columns>
+
+                        <TableColumn fx:id="idCol"
+                                     text="Invoice ID"
+                                     prefWidth="120"/>
+
+                        <TableColumn fx:id="customerCol"
+                                     text="Customer"
+                                     prefWidth="220"/>
+
+                        <TableColumn fx:id="bookingCol"
+                                     text="Booking"
+                                     prefWidth="180"/>
+
+                        <TableColumn fx:id="roomCol"
+                                     text="Room Charge"
+                                     prefWidth="150"/>
+
+                        <TableColumn fx:id="serviceCol"
+                                     text="Service"
+                                     prefWidth="150"/>
+
+                        <TableColumn fx:id="taxCol"
+                                     text="Tax"
+                                     prefWidth="120"/>
+
+                        <TableColumn fx:id="totalCol"
+                                     text="Total Amount"
+                                     prefWidth="180"/>
+
+                    </columns>
+
+                </TableView>
+
+            </VBox>
+
+        </VBox>
+
+    </center>
+
+</BorderPane>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox spacing="18"
+      xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.kairav.hotelapp.controller.SmartController"
+      style="-fx-background-color: #f4f6f8;">
+
+    <padding>
+        <Insets top="25" right="25" bottom="25" left="25"/>
+    </padding>
+
+    <!-- Header -->
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <VBox spacing="4">
+            <Label text="Smart Stay Algorithms"
+                   style="-fx-font-size: 26px; -fx-font-weight: bold; -fx-text-fill: #111827;"/>
+
+            <Label text="Dynamic pricing, room recommendation, demand forecasting and smart decision tools."
+                   style="-fx-font-size: 13px; -fx-text-fill: #6b7280;"/>
+        </VBox>
+
+        <Pane HBox.hgrow="ALWAYS"/>
+    </HBox>
+
+    <!-- Smart Tool Buttons -->
+    <VBox spacing="12"
+          style="-fx-background-color: white; -fx-background-radius: 14; -fx-padding: 18; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.10), 8, 0, 0, 3);">
+
+        <Label text="Algorithm Actions"
+               style="-fx-font-size: 17px; -fx-font-weight: bold; -fx-text-fill: #111827;"/>
+
+        <HBox spacing="10" alignment="CENTER_LEFT">
+
+            <Button text="Load Dynamic Pricing"
+                    onAction="#loadPricing"
+                    style="-fx-background-color: #2563eb; -fx-text-fill: white; -fx-font-weight: bold; -fx-padding: 9 16 9 16; -fx-background-radius: 8;"/>
+
+            <TextField fx:id="budgetField"
+                       promptText="Customer Budget, e.g. 3500"
+                       prefWidth="200"
+                       style="-fx-padding: 9;"/>
+
+            <ComboBox fx:id="categoryBox"
+                      promptText="Recommendation Category"
+                      prefWidth="190"
+                      style="-fx-padding: 3;"/>
+
+            <Button text="Recommend Room"
+                    onAction="#recommendRoom"
+                    style="-fx-background-color: #16a34a; -fx-text-fill: white; -fx-font-weight: bold; -fx-padding: 9 16 9 16; -fx-background-radius: 8;"/>
+
+            <Button text="Forecast Demand"
+                    onAction="#forecastDemand"
+                    style="-fx-background-color: #7c3aed; -fx-text-fill: white; -fx-font-weight: bold; -fx-padding: 9 16 9 16; -fx-background-radius: 8;"/>
+
+        </HBox>
+    </VBox>
+
+    <!-- Output Area -->
+    <VBox spacing="10"
+          VBox.vgrow="ALWAYS"
+          style="-fx-background-color: white; -fx-background-radius: 14; -fx-padding: 18; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.10), 8, 0, 0, 3);">
+
+        <Label text="Smart Output"
+               style="-fx-font-size: 17px; -fx-font-weight: bold; -fx-text-fill: #111827;"/>
+
+        <TextArea fx:id="outputArea"
+                  prefHeight="430"
+                  wrapText="true"
+                  editable="false"
+                  VBox.vgrow="ALWAYS"
+                  promptText="Algorithm result will appear here..."
+                  style="-fx-font-size: 14px; -fx-control-inner-background: #f9fafb;"/>
+
+    </VBox>
+
+</VBox>
