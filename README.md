@@ -81,39 +81,7 @@ The system uses a **JavaFX desktop frontend**, **Spring Boot REST API backend**,
 
 ---
 
-# 🧠 Smart Features & Algorithms
 
-Smart Stay also implements algorithm-based features proposed for the project.
-
-### 💵 1. Dynamic Pricing Algorithm
-
-The system calculates room pricing based on factors such as:
-
-* Room availability
-* Occupancy
-* Demand
-
-This allows room prices to be adjusted dynamically according to hotel demand.
-
-### 📈 2. Moving Average Demand Forecast
-
-A **Moving Average** approach is used to analyze historical booking data and estimate future demand.
-
-This can help provide an indication of expected booking demand.
-
-### 🏨 3. Budget-Based Room Recommendation
-
-The system recommends suitable rooms based on the customer's specified budget.
-
-Example:
-
-```text
-GET /api/smart/recommend-room?budget=3500
-```
-
-The system returns rooms that match the specified budget.
-
----
 
 # 🏗️ System Architecture
 
